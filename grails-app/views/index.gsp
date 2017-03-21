@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta name="layout" content="main"/>
-        <title>Gestion alquiler</title>
+        <title>Gestión alquiler</title>
 
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 </head>
 <body>
 <content tag="nav">
-    <li class="dropdown">
+   <!-- <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <li><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
@@ -35,7 +35,7 @@
             <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
         </ul>
     </li>
-    <li class="dropdown">
+     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
         <ul class="dropdown-menu">
             <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
@@ -43,13 +43,35 @@
                 </g:each>
         </ul>
     </li>
+-->
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Inquilinos <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-            <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
-            </g:each>
+        <ul class="dropdown-menu">        
+            <li><a class="list" href="${createLink(uri: '/inquilino')}">
+                    <g:message code="default.list"/></a></li>
+            <li><a class="create" href="${createLink(uri: '/inquilino/create')}">
+                    <g:message code="default.create"/></a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Propiedades <span class="caret"></span></a>
+        <ul class="dropdown-menu">        
+            <li><a class="list" href="${createLink(uri: '/propiedad')}">
+                    <g:message code="default.list"/></a></li>
+            <li><a class="create" href="${createLink(uri: '/propiedad/create')}">
+                    <g:message code="default.create"/></a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Alquiler <span class="caret"></span></a>
+        <ul class="dropdown-menu">        
+            <li><a class="list" href="${createLink(uri: '/alquiler')}">
+                    <g:message code="default.list"/></a></li>
+            <li><a class="create" href="${createLink(uri: '/alquiler/create')}">
+                    <g:message code="default.create"/></a></li>
         </ul>
     </li>
 </content>
@@ -58,13 +80,10 @@
 
 <div id="content" role="main">
     <section class="row colset-2-its">
-        <h1>Welcome to Grails</h1>
+        <h1>Welcome to MTV</h1>
 
         <p>
-            Congratulations, you have successfully started your first Grails application! At the moment
-            this is the default page, feel free to modify it to either redirect to a controller or display
-            whatever content you may choose. Below is a list of controllers that are currently deployed in
-            this application, click on each to execute its default action:
+          
         </p>
 
         <div id="controllers" role="navigation">

@@ -7,12 +7,11 @@ class BootStrap {
 
         //adding some data
          10.times{ authorIndex ->
-               Inquilino inquilino = new Inquilino(nombre: "Cliente ${authorIndex}").save()
+                new Inquilino(nombre: "Cliente ${authorIndex}").save()
+                new Propiedad(alias: "Pdad ${authorIndex}").save()
+                println "Run Bootstrap ${authorIndex}"
          }
                
-        10.times{ index ->               
-            Propiedad propiedad = new Propiedad(alias: "Pdad ${index}").save()
-        }
         
           //creating a user with ROLE_ADMIN
         User user = new User(username: 'admin', password: 'admin').save()

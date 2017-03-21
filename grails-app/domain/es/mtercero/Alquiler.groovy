@@ -11,10 +11,10 @@ class Alquiler {
     int precio
     String observacion
     
-    static hasOne = [propiedad: Propiedad, inquilino: Inquilino]
+    Propiedad propiedad
+    Inquilino inquilino
     
      static constraints = {
-        propiedad unique: true
-        inquilino unique: true
+      
     }
 }

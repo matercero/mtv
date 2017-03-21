@@ -9,9 +9,18 @@ class Propiedad {
     String provincia
     int contadorLuz
     int contadorAgua
-    Alquiler alquiler
+    
+    String toString(){
+        alias
+    }
    
     static constraints = {       
-           alquiler unique: false
+        alias blank: false
+        direccion blank: false
+        municipio blank: false
+        codigoPostal blank: false
+        provincia blank: false
+        contadorAgua blank: false
+        contadorLuz blank: false           
     }
 }

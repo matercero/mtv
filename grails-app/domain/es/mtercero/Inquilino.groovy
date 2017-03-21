@@ -30,4 +30,20 @@ class Inquilino {
         mail email: true, nullable: true       
         observaciones nullable: true, maxsize : 99999 
     }
+    
+    static mapping = {
+        table 'inquilino'
+        version false
+        id column: 'id'
+        dni column: 'dni'
+        nombre column: 'nombre'
+        apellidos column: 'apellidos'
+        direccion column: 'direccion'
+        municipio column: 'municipio'
+        codigoPostal column: 'codigoPostal'
+        provincia column: 'provincia'
+        mail column: 'mail'
+        telefono column: 'telefono'
+        observaciones column: 'observaciones'        
+    }
 }

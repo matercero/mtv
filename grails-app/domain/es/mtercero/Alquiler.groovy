@@ -14,7 +14,22 @@ class Alquiler {
     Propiedad propiedad
     Inquilino inquilino
     
-     static constraints = {
-      
+    static constraints = {      
+    }
+    
+    static mapping = {
+        table 'alquiler'
+        version false
+        id column: 'id'
+        fechaInicio column: 'fechaInicio'
+        fechaFin column: 'fechaFin'
+        luzInicio column: 'luzInicio'
+        luzFin column: 'luzFin'
+        aguaInicio column: 'aguaInicio'
+        aguaFin column: 'aguaFin'
+        precio column: 'precio'
+        inquilino column: 'id_Inquilino'
+        propiedad column: 'id_Propiedad'
+        
     }
 }

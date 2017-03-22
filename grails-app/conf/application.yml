@@ -102,7 +102,7 @@ environments:
             jmxExport: true
             driverClassName: com.mysql.jdbc.Driver
             username: root
-            password: 
+            password: root
             dbCreate: update
             url: jdbc:mysql://localhost:3306/mtv
     test:
